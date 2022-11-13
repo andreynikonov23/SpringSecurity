@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
-    <head>
-        <meta charset="utf-8">
-        <title>Developers</title>
-    </head>
-    <body>
-        <div th:each="dev : ${devops}">
-            <p th:text="${dev}"></p>
-        </div>
-    <button onclick="document.location='/create'">Добавить работника</button>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="document.location='/api/hello'">Вход</button>
+</body>
 </html>

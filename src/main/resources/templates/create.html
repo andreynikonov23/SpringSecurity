@@ -6,11 +6,11 @@
 </head>
 <body>
 <h1>Hello</h1>
-    <form method="post" action="/new" th:object="${worker}">
+    <form th:method="POST" th:action="@{/api/add}" th:object="${worker}">
       <label for="id"></label><input id="id" type="text" th:field="*{id}">
       <label for="firstname"></label><input id="firstname" type="text" th:field="*{firstname}">
       <label for="lastname"></label><input id="lastname" type="text" th:field="*{lastname}">
-        <input type="submit">
+        <input type="submit" value="Добавить" id="create">
     </form>
 </body>
 </html>
