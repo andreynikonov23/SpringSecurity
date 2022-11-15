@@ -20,6 +20,10 @@ public class ViewController {
             new Worker(3, "Alexey", "Developer")
     ).collect(Collectors.toList());
 
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
     @GetMapping("/")
     public String index(){
         return "index";

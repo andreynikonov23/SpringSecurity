@@ -5,6 +5,9 @@
         <title>Developers</title>
     </head>
     <body>
+    <form class="form-logout" method="POST" action="/logout">
+        <input type="submit" value="Выход">
+    </form>
         <div th:each="dev : ${devops}">
             <p th:text="${dev}"></p>
         </div>
