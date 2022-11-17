@@ -13,13 +13,17 @@ public class Users {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "username")
     private String username;
+    @Column(name = "password")
     private String password;
-    @Column(name = "first_name")
+    @Column(name = "firstname")
     private String firstName;
     @Enumerated(value = EnumType.STRING)
+    @Column(name = "role")
     private Role role;
     @Enumerated(value = EnumType.STRING)
+    @Column(name = "status")
     private Status status;
 
     public Users(int id, String username, String password, String firstName, Role role, Status status) {
@@ -87,5 +91,11 @@ public class Users {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+
+    @Override
+    public String toString(){
+        return username + " " + password;
     }
 }
